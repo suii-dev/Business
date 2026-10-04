@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-primary-navy: #0f2b48;
+    --color-primary-blue: #1a56db;
+    --color-accent-orange: #ea580c;
+    --color-accent-amber: #f59e0b;
+    --color-accent-green: #059669;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* 3D Spatial & Perspective Classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+.translate-z-40 {
+  transform: translateZ(40px);
+}
+
+.translate-z-50 {
+  transform: translateZ(50px);
+}
+
+/* 3D Tactile Shadows with Ambient Occlusion */
+.shadow-3d-sm {
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 8px -2px rgba(15, 23, 42, 0.08),
+    0 8px 16px -4px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.shadow-3d-card {
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.04),
+    0 8px 16px -4px rgba(15, 23, 42, 0.08),
+    0 20px 32px -8px rgba(15, 23, 42, 0.12),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.shadow-3d-hover {
+  box-shadow:
+    0 12px 24px -6px rgba(15, 23, 42, 0.12),
+    0 24px 48px -12px rgba(15, 23, 42, 0.18),
+    0 0 24px 0 rgba(245, 158, 11, 0.12),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+}
+
+.shadow-3d-btn {
+  box-shadow: 
+    0 4px 0 #1d4ed8,
+    0 8px 16px rgba(29, 78, 216, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.15s ease-out;
+}
+
+.shadow-3d-btn:hover {
+  box-shadow: 
+    0 5px 0 #1d4ed8,
+    0 12px 20px rgba(29, 78, 216, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.shadow-3d-btn:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 1px 0 #1d4ed8,
+    0 4px 8px rgba(29, 78, 216, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-3d-amber-btn {
+  box-shadow: 
+    0 4px 0 #b45309,
+    0 8px 16px rgba(217, 119, 6, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.15s ease-out;
+}
+
+.shadow-3d-amber-btn:hover {
+  box-shadow: 
+    0 5px 0 #b45309,
+    0 12px 20px rgba(217, 119, 6, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.shadow-3d-amber-btn:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 1px 0 #b45309,
+    0 4px 8px rgba(217, 119, 6, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes float-depth {
+  0%, 100% {
+    transform: translateY(0px) translateZ(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-8px) translateZ(25px) rotateX(2deg);
+  }
+}
+
+@keyframes spin-pedestal {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float-depth 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+.animate-spin-pedestal {
+  animation: spin-pedestal 24s linear infinite;
+}
+
+

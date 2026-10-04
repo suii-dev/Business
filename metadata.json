@@ -1,0 +1,8 @@
+{
+  "name": "Amit Trading - Wholesale & Retail | Tri Nagar Delhi",
+  "description": "Amit Trading in Tri Nagar, Delhi offers wholesale and retail products including ASHOKA CONE, AMBER CONE, ice-cream and bakery goods, milk shake and mocktail flavours, disposable items, silver plates and paper glasses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
